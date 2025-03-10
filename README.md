@@ -21,8 +21,8 @@ PN层，但是会训练y跟b
       由于自然域划分可能会将非同分布的样本分配给相同的域，而简单的更细粒度的域划分会加剧数据稀疏性，因此我们手动选择一个标准，并在样本空间上进行辅助域划分。在自然域和辅助域划分下，我们训练了两组指向不同方向的LORAS。
 
       融合： 受此启发，我们的目标是结合在多个领域划分下获得的特定领域的LORAS，共同促进更准确的推荐。对于图像生成，组合权重通常由人工确定。[231.我们设计了一个LORA融合模块来计算权重。我们假设一个样本r在自然域划分下属于域A，在辅助域划分下属于域B。让对应于域A和域B的LORA模块分别为LoRAa和LORAB，包含从两个不同角度的域特定偏好模式。我们设计了一种新颖的注意力模块，用于动态生成权重并融合这些LoRA模块。 这是更细粒度的领域划分。包含从两个不同角度的域特定偏好模式。
-      ![image](https://github.com/user-attachments/assets/77445dc8-64bd-4b87-8e42-a7dd068b1466)
-      ![image](https://github.com/user-attachments/assets/b807d8f2-4c02-4493-b7b7-df0034cd85cc)
+   ![image](https://github.com/user-attachments/assets/77445dc8-64bd-4b87-8e42-a7dd068b1466)
+   ![image](https://github.com/user-attachments/assets/b807d8f2-4c02-4493-b7b7-df0034cd85cc)
 
       
 
